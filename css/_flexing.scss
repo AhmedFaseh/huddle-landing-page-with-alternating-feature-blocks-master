@@ -1,0 +1,64 @@
+.col{
+    display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+    
+    }
+.row{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+}
+.jcs{
+  justify-content:flex-start;
+}
+.jce{
+  justify-content:flex-end;
+}
+.jc-bet{
+  justify-content:space-between;
+}
+.jc-eve{
+  justify-content:space-evenly;
+}
+.as{
+  align-items: flex-start;
+}
+.ae{
+  align-items:flex-end;
+}
+.ass{
+  align-self: flex-start;
+}
+.ase{
+  align-self:flex-end;
+}
+
+.centaring{
+  @extend .col;
+}
+
+
+
+
+$gri-c: 26;
+$gri-r: 5;
+
+@mixin gri-c($gri-c){
+  display: grid;
+  grid-template-columns: repeat($gri-c , 1fr);
+}
+@mixin gri-r($gri-r){
+  display: grid;
+  grid-template-rows: repeat( $gri-r , 1fr);
+}
+
+
+
+@mixin screenwidth($max-widh){
+  @media screen and (max-width: $max-width ){
+    
+  }
+}
